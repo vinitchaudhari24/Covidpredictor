@@ -1,0 +1,147 @@
+<html>
+<head>
+	<title> COVID predictor </title>
+	<style>
+		#rcorners2 {
+  border-radius: 25px;
+  border: 5px solid #FFFFFF;
+  padding: 20px;
+  width: 1450px;
+  height: 25px;
+}
+
+#rcorners3 {
+  border-radius: 25px;
+  border: 5px solid #FFFFFF;
+  padding: 20px; 
+  width: 1450px;
+  height:950px;  
+}
+
+#rcorners4 {
+  border-radius: 25px;
+  border: 5px solid #FFFFFF;
+  padding: 20px; 
+  width: 1450px;
+  height:25px;  
+}
+
+#rcorners5 {
+  border-radius: 25px;
+  border: 5px solid #FFFFFF;
+  padding: 20px; 
+  width: 50 px;
+  height:25px;  
+}
+
+
+
+div.c { 
+padding:20px;
+  display:flex;
+height:10px;
+  
+  color: black;
+ 
+} 
+
+a {
+text-color:black;
+text-decoration:none;
+
+}
+
+nav {   justify-content:space-between;
+	background-color: white;display:flex;
+}
+div.welcome{
+	padding:20px;
+	display:flex;
+}
+
+		* { font-size:20px; font-family:Georgia;}
+		body {background-color:lightgreen; margin:0px;border:0px}
+	</style>
+</head>
+<body>
+
+	<nav>
+	<div class="welcome"> <span> Welcome !</span></div> 
+	<div class="c">  <a href={{ url_for('login') }}>Logout</a> </div> </nav>
+<center>
+	
+	<h1> <p id="rcorners2"> This application will predict if you have Flu, Fever, Allergy or Covid based on the symtomps </p> </h1>
+	<p id="rcorners4"> Select yes if you have following symtomps and no if you don't. Please answer each question in order to find accurate results</p>
+	
+	
+	 <form action="/find_out">
+	<p id="rcorners3"> Coughing : <input type="radio" name = "r1" value="yes"> Yes </input>
+	<input type="radio" name = "r1" value="no"> No </input>
+	<br><br>
+	Muscle Aching : <input type="radio" name = "r2" value="yes"> Yes </input>
+	<input type="radio" name = "r2" value="no"> No </input>
+	<br><br>
+	Tiredness : <input type="radio" name = "r3" value="yes"> Yes </input>
+	<input type="radio" name = "r3" value="no"> No </input>
+	<br><br>
+	Sore Throat : <input type="radio" name = "r4" value="yes"> Yes </input>
+	<input type="radio" name = "r4" value="no"> No </input>
+	<br><br>
+	Runny Nose : <input type="radio" name = "r5" value="yes"> Yes </input>
+	<input type="radio" name = "r5" value="no"> No </input>
+	<br><br>
+	Stuffy Nose : <input type="radio" name = "r6" value="yes"> Yes </input>
+	<input type="radio" name = "r6" value="no"> No </input>
+	<br><br>
+	Fever : <input type="radio" name = "r7" value="yes"> Yes </input>
+	<input type="radio" name = "r7" value="no"> No </input>
+	<br><br>
+	Nausea : <input type="radio" name = "r8" value="yes"> Yes </input>
+	<input type="radio" name = "r8" value="no"> No </input>
+	<br><br>
+	Vomiting : <input type="radio" name = "r9" value="yes"> Yes </input>
+	<input type="radio" name = "r9" value="no"> No </input>
+	<br><br>
+	Loose Motions : <input type="radio" name = "r10" value="yes"> Yes </input>
+	<input type="radio" name = "r10" value="no"> No </input>
+	<br><br>
+	Shortness of breath : <input type="radio" name = "r11" value="yes"> Yes </input>
+	<input type="radio" name = "r11" value="no"> No </input>
+	<br><br>
+	Difficulty in breathing : <input type="radio" name = "r12" value="yes"> Yes </input>
+	<input type="radio" name = "r12" value="no"> No </input>
+	<br><br>
+	Loss of taste : <input type="radio" name = "r13" value="yes"> Yes </input>
+	<input type="radio" name = "r13" value="no"> No </input>
+	<br><br>
+	Loss of smell : <input type="radio" name = "r14" value="yes"> Yes </input>
+	<input type="radio" name = "r14" value="no"> No </input>
+	<br><br>
+	Itchy nose : <input type="radio" name = "r15" value="yes"> Yes </input>
+	<input type="radio" name = "r15" value="no"> No </input>
+	<br><br>	
+	Itchy eyes : <input type="radio" name = "r16" value="yes"> Yes </input>
+	<input type="radio" name = "r16" value="no"> No </input>
+	<br><br>
+	Itchy mouth : <input type="radio" name = "r17" value="yes"> Yes </input>
+	<input type="radio" name = "r17" value="no"> No </input>
+	<br><br>
+	Itchy inner ear: <input type="radio" name = "r18" value="yes"> Yes </input>
+	<input type="radio" name = "r18" value="no"> No </input>
+	<br><br>
+	Sneezing : <input type="radio" name = "r19" value="yes"> Yes </input>
+	<input type="radio" name = "r19" value="no"> No </input>
+	<br><br>
+	Pink eye : <input type="radio" name = "r20" value="yes"> Yes </input>
+	<input type="radio" name = "r20" value="no"> No </input></p>
+	<br>
+	<input type = "Submit" value="Find out">
+	</form> 
+	
+      <p id="rcorners5">  {{ msg }} </p>
+	
+
+</center>
+</body>
+
+</html>

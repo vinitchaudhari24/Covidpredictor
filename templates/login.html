@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title> COVID predictor login </title>
+	<style>
+	* {font-size:40px;font-family="Georgia"}
+	body {background-color:lightgreen;}
+	a { text-decoration:none;
+		color:black;
+		font-family:"Georgia"
+	}
+	</style>
+</head>
+
+<body>
+
+	
+<center>
+	<h1> Login </h1>	
+	<form method= "POST" action="/login">
+	<input type = "text" name = "un" placeholder="enter username" required>
+	<br><br>
+	<input type = "password" name = "pw" placeholder="enter password" required>
+	<br><br>
+	<input type = "submit" placeholder= "Login">
+	</form>
+	<a href="{{ url_for('signup')}}"> New User </a>
+	<br><br>
+	{{ msg }}
+</center>
+</body>
+</html>
